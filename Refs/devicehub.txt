@@ -1,0 +1,28 @@
+* Site:
+http://devicehub.net/project/1150
+
+Actuator:-
+
+* To get actuator(switch) digital value. Type this command in linux.
+curl -i http://devicehub.net/io/1150/actuator/707/?apiKey=06e038e7-b60a-4574-8222-c40a88099e7c
+
+* It Returns:
+HTTP/1.1 200 OK
+Server: nginx/1.1.19
+Date: Tue, 26 May 2015 05:53:45 GMT
+Content-Type: text/plain
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Cookie
+
+0
+
+* OR we can send this command from arduino.
+GET http://devicehub.net/io/1150/actuator/707/?apiKey=06e038e7-b60a-4574-8222-c40a88099e7c
+
+this will return value of on or off state.
+
+Sensor:-
+
+* Set value of sensor by this command.
+curl -i http://devicehub.net/io/project/1150/sensor/apiKey=06e038e7-b60a-4574-8222-c40a88099e7c -d value=40.0
